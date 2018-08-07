@@ -1,0 +1,11 @@
+#!/bin/bash
+
+wal -i "$1"
+wal -R
+
+OLD_LOCATION="$HOME/pix/Wallpapers"
+NEW_LOCATION="$HOME/i3c/Wallpaper"
+
+rm -rf $NEW_LOCATION/*
+cp $OLD_LOCATION/$1 $NEW_LOCATION/$1
+mv $NEW_LOCATION/$1 $NEW_LOCATION/wallpaper
